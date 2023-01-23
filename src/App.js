@@ -4,11 +4,11 @@ import Alert from './components/Alert';
 // import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Routes
+// } from "react-router-dom";
 
 function App() {
   const [mode,setmode] = useState("light");
