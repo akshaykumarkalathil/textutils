@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 import Alert from './components/Alert';
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import {
@@ -40,16 +40,17 @@ function App() {
 
   return (
   <>
-  <Router>
+  {/* <Router> */}
     <Navbar title="TextUtils" aboutTitle="About Us" mode={mode} toggleMode={toggleMode} />
     <Alert alert={alert} />
     <div className="container">
-    <Routes>
-      <Route exact path="/" element={<TextForm enterText="Enter the text to analyze" mode={mode} showAlert={showAlert} />} />
-      <Route exact path="/about" element={<About/>} />
-    </Routes>
+    {/* <Routes> */}
+    <TextForm enterText="Enter the text to analyze" mode={mode} showAlert={showAlert} />
+      {/* <Route exact path="/" element={<TextForm enterText="Enter the text to analyze" mode={mode} showAlert={showAlert} />} /> */}
+      {/* <Route exact path="/about" element={<About/>} /> */}
+    {/* </Routes> */}
     </div>
-  </Router>
+  {/* </Router> */}
   </>
   );
 }
