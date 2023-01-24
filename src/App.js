@@ -21,7 +21,7 @@ function App() {
     });
     setTimeout(() => {
       setalert(null);
-    }, 1500);
+    }, 2000);
   }
 
   const toggleMode = ()=>{
@@ -46,9 +46,9 @@ function App() {
     <div className="container">
     {/* <Routes> */}
     <TextForm enterText="Enter the text to analyze" mode={mode} showAlert={showAlert} />
-      {/* <Route exact path="/" element={<TextForm enterText="Enter the text to analyze" mode={mode} showAlert={showAlert} />} /> */}
-      {/* <Route exact path="/about" element={<About/>} /> */}
-    {/* </Routes> */}
+      {/* <Route exact path="/" element={<TextForm enterText="Enter the text to analyze" mode={mode} showAlert={showAlert} />} />
+      <Route exact path="/about" element={<About mode={mode} />} />
+    </Routes> */}
     </div>
   {/* </Router> */}
   </>

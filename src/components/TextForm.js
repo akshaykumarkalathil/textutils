@@ -41,17 +41,17 @@ export default function TextForm(props) {
         <div className="mb-3">
             <textarea style={{backgroundColor:props.mode==='light'?'white':'#80808057', color:props.mode==='light'?'black':'white'}} className="form-control" onChange={handleOnchange} value={text} id="myBox" rows="8"></textarea>
         </div>
-        <button className="btn btn-primary" onClick={handleUpClick}>Convert to Upper Case</button>
-        <button className="btn btn-primary mx-1" onClick={handleLoClick}>Convert to Lower Case</button>
-        <button className="btn btn-primary" onClick={handleClearClick}>Clear Text</button>
-        <button className="btn btn-primary mx-1" onClick={handleAlterCaseClick}>Convert To Alter Case</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleUpClick}>Convert to Upper Case</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleLoClick}>Convert to Lower Case</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleClearClick}>Clear Text</button>
+        <button disabled={text.length===0} className="btn btn-primary mx-1 my-1" onClick={handleAlterCaseClick}>Convert To Alter Case</button>
     </div>
     <div className="container" style={{color:props.mode==='light'?'black':'white'}}>
         <h2>Your Text Summary </h2>
         <p>{text.trim() === '' ? 0 : text.match(/\S+/g).length} words and {text.replace(/\s+/g, '').length} characters</p>
-        <p>{0.008*text.split(" ").length} Minutes read</p>
+        <p>{text.trim() === '' ? 0 : 0.008*text.split(" ").length} Minutes read</p>
         <h2>Preview</h2>
-        {text.length>0?text:'Enter something in the text box to preview here'}
+        {text.length>0?text:'Nothig to preview'}
     </div>
     
     </>
